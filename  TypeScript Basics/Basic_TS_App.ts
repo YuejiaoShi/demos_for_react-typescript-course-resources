@@ -33,8 +33,8 @@ function calculate(
   a: number,
   b: number,
   calFunc: (a: number, b: number) => number
-) {
-  calFunc(a, b);
+): number {
+  return calFunc(a, b);
 }
 
 console.log(calculate(1, 2, add));
