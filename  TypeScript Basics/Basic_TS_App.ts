@@ -16,3 +16,7 @@ user = {
   isAdmin: true,
   id: "abc12",
 };
+
+// array type
+let hobbies: Array<string>;
+hobbies = ["badminton", "swimming", "cycling"];
