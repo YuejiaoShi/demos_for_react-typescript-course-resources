@@ -22,7 +22,8 @@ let hobbies: Array<string>;
 hobbies = ["badminton", "swimming", "cycling"];
 
 // type in function
-function add(a: number, b: number): number {
+function add(a: number, b: number): void{
   const result = a + b;
-  return result;
+  //   return result;
+  console.log(result);
 }
