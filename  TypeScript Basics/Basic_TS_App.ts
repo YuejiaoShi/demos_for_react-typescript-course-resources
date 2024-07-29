@@ -22,8 +22,19 @@ let hobbies: Array<string>;
 hobbies = ["badminton", "swimming", "cycling"];
 
 // type in function
-function add(a: number, b: number): void{
+function add(a: number, b: number) {
   const result = a + b;
-  //   return result;
-  console.log(result);
+  //   console.log(result);
+  return result;
 }
+
+// create a function to receive another function as parameter
+function calculate(
+  a: number,
+  b: number,
+  calFunc: (a: number, b: number) => number
+) {
+  calFunc(a, b);
+}
+
+console.log(calculate(1, 2, add));
