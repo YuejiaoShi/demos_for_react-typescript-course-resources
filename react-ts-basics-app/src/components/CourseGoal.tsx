@@ -1,9 +1,12 @@
-export default function CourseGoal() {
+export default function CourseGoal(props: {
+  title: string;
+  description: string;
+}) {
   return (
     <article>
       <div>
-        <h2>Title</h2>
-        <p>Description</p>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
         <button>Delete</button>
       </div>
     </article>
