@@ -40,3 +40,14 @@ function calculate(
 }
 
 console.log(calculate(1, 2, add));
+
+// Define Object Types with interface
+interface Credentials {
+  password: string;
+  email: string;
+}
+let creds: Credentials;
+creds = {
+  password: "pass",
+  email: "test@example.com",
+};
