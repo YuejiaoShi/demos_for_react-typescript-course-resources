@@ -1,15 +1,11 @@
-import React from 'react';
-
-interface Props {
-  // define props here
-}
-
-const CourseGoal: React.FC<Props> = ({  }) => {
+export default function CourseGoal() {
   return (
-    <div>
-      // component content
-    </div>
+    <article>
+      <div>
+        <h2>Title</h2>
+        <p>Description</p>
+        <button>Delete</button>
+      </div>
+    </article>
   );
 }
-
-export default ComponentName;
