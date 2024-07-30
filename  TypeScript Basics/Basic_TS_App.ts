@@ -97,3 +97,21 @@ function performAction(action: string | number, role: Role) {
     // execute ...
   }
 }
+
+// can NOT check if a value meets the definition of a custom type (type alias) or interface type.
+// if (typeof u === User) will never work
+type User4 = {
+  name: string;
+  age: number;
+};
+
+type Admin4 = {
+  name: string;
+  age: number;
+  permissions: string[];
+};
+// But could check for the existence of props
+function login4(u: User4 | Admin4) {
+  if ("permissions" in u) {
+  }
+}
