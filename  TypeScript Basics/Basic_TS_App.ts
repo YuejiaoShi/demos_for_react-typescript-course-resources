@@ -54,3 +54,20 @@ interface Credentials {
   password: string;
   email: string;
 }
+// Merging types
+type Admin = {
+  permissions: string[];
+};
+type AppUser = {
+  userName: string;
+};
+type AppAdmin = Admin & AppUser;
+let admin: AppAdmin;
+admin = {
+  permissions: ["login"],
+  userName: "Yuejiao",
+};
+// extends
+interface AppAdmin2 extends Admin, AppUser {
+  // add more property pr just leave it empty
+}
