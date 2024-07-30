@@ -83,4 +83,4 @@ class AuthCredenticals implements Credentials {
 
 function login(credentials: Credentials) {}
 
-login(creds);
+login(new AuthCredenticals());
