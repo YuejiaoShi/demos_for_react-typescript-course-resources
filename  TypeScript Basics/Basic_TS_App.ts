@@ -47,7 +47,10 @@ interface Credentials {
   email: string;
 }
 let creds: Credentials;
-creds = {
-  password: "pass",
-  email: "test@example.com",
-};
+interface Credentials {
+  mode: "pass";
+}
+interface Credentials {
+  password: string;
+  email: string;
+}
