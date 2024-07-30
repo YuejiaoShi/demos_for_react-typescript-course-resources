@@ -47,9 +47,9 @@ interface Credentials {
   email: string;
 }
 let creds: Credentials;
-interface Credentials {
-  mode: "pass";
-}
+// interface Credentials {
+//   mode: "pass";
+// }
 interface Credentials {
   password: string;
   email: string;
@@ -70,4 +70,10 @@ admin = {
 // extends
 interface AppAdmin2 extends Admin, AppUser {
   // add more property pr just leave it empty
+}
+// implement a interface type. it should as least contain all the implements' props
+class AuthCredenticals implements Credentials {
+  password: string;
+  email: string;
+  userName: string;
 }
