@@ -84,3 +84,9 @@ class AuthCredenticals implements Credentials {
 function login(credentials: Credentials) {}
 
 login(new AuthCredenticals());
+
+// literal type
+let role: "admin" | "user" | "editor";
+role = "admin";
+role = "user";
+role = "editor";
