@@ -29,6 +29,8 @@ function add(a: number, b: number) {
 }
 
 // create a function to receive another function as parameter
+type AddFn = (a: number, b: number) => number;
+
 function calculate(
   a: number,
   b: number,
