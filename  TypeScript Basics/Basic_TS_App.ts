@@ -115,3 +115,7 @@ function login4(u: User4 | Admin4) {
   if ("permissions" in u) {
   }
 }
+
+// Generic Types
+let roles: Array<Role>;
+roles = ["admin", "editor"];
