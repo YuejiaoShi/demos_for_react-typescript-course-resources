@@ -91,6 +91,7 @@ let role: Role;
 role = "admin";
 role = "user";
 role = "editor";
+// Type Guards & Type Narrowing
 function performAction(action: string | number, role: Role) {
   if (role === "admin" && typeof action === "string") {
     // execute ...
