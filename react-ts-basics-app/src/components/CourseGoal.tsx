@@ -5,7 +5,8 @@ import { FC, PropsWithChildren, type ReactNode } from "react";
 //   description: string;
 //   children: ReactNode;
 // };
-
+// An alternative way to define children's reactNode type
+// while also extends more specific props types lie title and description here
 type CourseGoalProps = PropsWithChildren<{
   title: string;
   description: string;
