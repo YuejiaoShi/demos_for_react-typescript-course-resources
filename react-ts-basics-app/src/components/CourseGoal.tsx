@@ -1,10 +1,15 @@
-import { type ReactNode } from "react";
+import { PropsWithChildren, type ReactNode } from "react";
 
-type CourseGoalProps = {
+// type CourseGoalProps = {
+//   title: string;
+//   description: string;
+//   children: ReactNode;
+// };
+
+type CourseGoalProps = PropsWithChildren<{
   title: string;
   description: string;
-  children: ReactNode;
-};
+}>;
 
 export default function CourseGoal({
   title,
