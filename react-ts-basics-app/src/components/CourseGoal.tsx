@@ -6,12 +6,17 @@ type CourseGoalProps = {
   children: ReactNode;
 };
 
-export default function CourseGoal({ title, description }: CourseGoalProps) {
+export default function CourseGoal({
+  title,
+  description,
+  children,
+}: CourseGoalProps) {
   return (
     <article>
       <div>
         <h2>{title}</h2>
         <p>{description}</p>
+        {children}
         <button>Delete</button>
       </div>
     </article>
