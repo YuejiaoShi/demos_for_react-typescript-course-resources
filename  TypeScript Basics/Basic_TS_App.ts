@@ -119,3 +119,9 @@ function login4(u: User4 | Admin4) {
 // Generic Types
 let roles: Array<Role>;
 roles = ["admin", "editor"];
+
+type DataStorage<T> = {
+  storage: T[];
+  add: (data: T) => void;
+};
+
