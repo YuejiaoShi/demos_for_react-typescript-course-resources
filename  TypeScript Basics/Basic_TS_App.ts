@@ -138,3 +138,16 @@ const userStorage: DataStorage<User> = {
     this.storage.push(user);
   },
 };
+
+// Generic Functions
+function merge<T, U>(a: T, b: U) {
+  return {
+    ...a,
+    ...b,
+  };
+}
+
+const newUser = merge<{ username: string }, { age: number }>(
+  { username: "Yuejiao" },
+  { age: 25 }
+);
