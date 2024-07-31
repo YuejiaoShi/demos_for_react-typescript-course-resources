@@ -1,8 +1,9 @@
 import React from "react";
 import CourseGoal from "./CourseGoal";
+import { type CourseGoal as CourseGoalProps } from "../App.tsx";
 
 interface CourseGoalListProps {
-  goals: { title: string; description: string; id: number }[];
+  goals: CourseGoalProps[];
 }
 
 const CourseGoalList: React.FC<CourseGoalListProps> = ({
