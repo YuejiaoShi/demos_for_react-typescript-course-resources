@@ -8,7 +8,14 @@ type CourseGoal = { title: string; description: string; id: number };
 export default function App() {
   const [goals, setGoals] = useState<CourseGoal[]>([]);
   function handleAddGoal() {
-    setGoals([...goals]);
+    setGoals((prevGoals) => {
+      const newGoal: CourseGoal = {
+        id: Math.random(),
+        title: "Learn React + TS",
+        description: "Learn it in depth",
+      };
+      return [...prevGoals, newGoal];
+    });
   }
   return (
     <main>
@@ -16,12 +23,13 @@ export default function App() {
         <h1>Your Course Goals</h1>
       </Header>
       <button onClick={handleAddGoal}>Add Goal</button>
-      <CourseGoal
-        title="Learn react+ TS"
-        description="Learn it from the ground up"
-      >
-        <p>what is your goal?</p>
-      </CourseGoal>
+      {goals.map((goal) => (
+        <li>
+          <CourseGoal title={goal.title} description={goal.description}>
+            <p>what is your goal?</p>
+          </CourseGoal>
+        </li>
+      ))}
     </main>
   );
 }
