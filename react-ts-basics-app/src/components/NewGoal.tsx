@@ -5,11 +5,13 @@ interface Props {
 }
 
 const NewGoal: React.FC<Props> = ({}) => {
-  const goal = useRef(null);
-  const summary = useRef(null);
+  const goal = useRef<HTMLInputElement>(null);
+  const summary = useRef<HTMLInputElement>(null);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault;
+
+    const enteredGoal = goal.current!.value;
   }
   return (
     <form onSubmit={handleSubmit}>
