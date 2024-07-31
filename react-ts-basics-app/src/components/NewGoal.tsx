@@ -4,7 +4,7 @@ interface NewGoalProps {
   onAddGoal: (goal: string, summary: string) => void;
 }
 
-const NewGoal: React.FC<Props> = ({}) => {
+const NewGoal: React.FC<NewGoalProps> = ({ onAddGoal }) => {
   const goal = useRef<HTMLInputElement>(null);
   const summary = useRef<HTMLInputElement>(null);
 
@@ -13,6 +13,7 @@ const NewGoal: React.FC<Props> = ({}) => {
 
     const enteredGoal = goal.current!.value;
     const enteredSummary = summary.current!.value;
+    onAddGoal(enteredGoal, enteredSummary);
   }
   return (
     <form onSubmit={handleSubmit}>
