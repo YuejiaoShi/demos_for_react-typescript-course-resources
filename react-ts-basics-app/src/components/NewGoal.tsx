@@ -1,12 +1,16 @@
-import React from "react";
+import React, { FormEvent } from "react";
 
 interface Props {
   // define props here
 }
 
+function handleSubmit(event: FormEvent) {
+  event.preventDefault;
+}
+
 const NewGoal: React.FC<Props> = ({}) => {
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <p>
         <label htmlFor="goal">Your Goal</label>
         <input id="goal" type="text"></input>
