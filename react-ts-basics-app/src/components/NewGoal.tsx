@@ -13,6 +13,7 @@ const NewGoal: React.FC<NewGoalProps> = ({ onAddGoal }) => {
 
     const enteredGoal = goal.current!.value;
     const enteredSummary = summary.current!.value;
+    event.currentTarget.reset();
     onAddGoal(enteredGoal, enteredSummary);
   }
   return (
