@@ -1,5 +1,5 @@
 import React from "react";
-import CourseGoal from "./CourseGoal";
+import CourseGoal from "./CourseGoal.tsx";
 import { type CourseGoal as CourseGoalProps } from "../App.tsx";
 
 interface CourseGoalListProps {
