@@ -4,11 +4,10 @@ interface Props {
   // define props here
 }
 
-function handleSubmit(event: FormEvent<HTMLFormElement>) {
-  event.preventDefault;
-}
-
 const NewGoal: React.FC<Props> = ({}) => {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault;
+  }
   return (
     <form onSubmit={handleSubmit}>
       <p>
