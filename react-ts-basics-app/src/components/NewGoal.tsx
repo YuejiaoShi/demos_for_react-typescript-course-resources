@@ -9,7 +9,7 @@ const NewGoal: React.FC<NewGoalProps> = ({ onAddGoal }) => {
   const summary = useRef<HTMLInputElement>(null);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault;
+    event.preventDefault();
 
     const enteredGoal = goal.current!.value;
     const enteredSummary = summary.current!.value;
