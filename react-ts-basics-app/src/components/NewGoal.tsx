@@ -4,7 +4,7 @@ interface Props {
   // define props here
 }
 
-function handleSubmit(event: FormEvent) {
+function handleSubmit(event: FormEvent<HTMLFormElement>) {
   event.preventDefault;
 }
 
@@ -13,7 +13,7 @@ const NewGoal: React.FC<Props> = ({}) => {
     <form onSubmit={handleSubmit}>
       <p>
         <label htmlFor="goal">Your Goal</label>
-        <input id="goal" type="text"></input>
+        <input id="goal" type="text" name="goal"></input>
       </p>
       <p>
         <label htmlFor="summary">Short Summary</label>
