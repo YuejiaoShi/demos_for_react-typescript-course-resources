@@ -24,7 +24,7 @@ export default function App() {
       </Header>
       <button onClick={handleAddGoal}>Add Goal</button>
       {goals.map((goal) => (
-        <li>
+        <li key={goal.id}>
           <CourseGoal title={goal.title} description={goal.description}>
             <p>what is your goal?</p>
           </CourseGoal>
