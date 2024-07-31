@@ -1,7 +1,7 @@
 import React, { FormEvent, useRef } from "react";
 
-interface Props {
-  // define props here
+interface NewGoalProps {
+  onAddGoal: (goal: string, summary: string) => void;
 }
 
 const NewGoal: React.FC<Props> = ({}) => {
@@ -12,6 +12,7 @@ const NewGoal: React.FC<Props> = ({}) => {
     event.preventDefault;
 
     const enteredGoal = goal.current!.value;
+    const enteredSummary = summary.current!.value;
   }
   return (
     <form onSubmit={handleSubmit}>
