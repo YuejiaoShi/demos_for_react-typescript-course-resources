@@ -9,14 +9,14 @@ function App() {
         <Button>A Button</Button>
       </p>
       <p>
-        <Button href="https://google.com">
-          A Link
-        </Button>
+        <Button href="https://google.com">A Link</Button>
       </p>
 
       <Input id="name" label="Your name" type="text" />
       <Input id="age" label="Your age" type="number" />
-      <Container element={Button}>Clickme</Container>
+      <Container element={Button} onClick={() => {}} type="button">
+        Clickme
+      </Container>
     </main>
   );
 }
