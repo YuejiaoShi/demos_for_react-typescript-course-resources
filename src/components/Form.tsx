@@ -10,7 +10,9 @@ type FormProps = ComponentPropsWithoutRef<"form"> & {
   onSave: (value: unknown) => void;
 };
 
-const Form = forwardRef(function Form(
+type FormHandle = { clear: () => void };
+
+const Form = forwardRef<FormHandle, FormProps>(function Form(
   { onSave, children, ...otherProps }: FormProps,
   ref
 ) {
