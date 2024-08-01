@@ -5,11 +5,11 @@ interface InputProps {
   id: string;
 } & ComponentPropsWithoutRef<''>;
 
-const Input: React.FC<InputProps> = ({ id, label }: InputProps) => {
+const Input: React.FC<InputProps> = ({ id, label,...props }: InputProps) => {
   return (
     <p>
       <label htmlFor={id}>{label}</label>
-      <input type="text" id={id} />
+      <input type="text" id={id} {...props}/>
     </p>
   );
 };
