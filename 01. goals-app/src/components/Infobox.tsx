@@ -21,9 +21,9 @@ type InfoBoxProps = HintBoxProps | WarningBoxProps;
 // }
 
 const InfoBox: React.FC<InfoBoxProps> = (props: InfoBoxProps) => {
-  const { children } = props;
+  const { children, mode } = props;
 
-  if (props.mode === "hint") {
+  if (mode === "hint") {
     return (
       <aside className="infobox infobox-hint">
         <p>{children}</p>
