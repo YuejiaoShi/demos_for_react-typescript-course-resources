@@ -1,9 +1,18 @@
-import React, { ComponentPropsWithoutRef } from "react";
+import React, { ComponentPropsWithoutRef, FormEvent } from "react";
 
 type FormProps = ComponentPropsWithoutRef<"form">;
 
 const Form: React.FC<FormProps> = (props) => {
-  return <form {...props}>{props.children}</form>;
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+  }
+
+  return (
+    <form onSubmit={handleSubmit} {...props}>
+      {props.children}
+    </form>
+  );
 };
 
 export default Form;
