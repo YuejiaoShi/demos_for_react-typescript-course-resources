@@ -1,4 +1,4 @@
-import React, {
+import {
   ComponentPropsWithoutRef,
   FormEvent,
   useImperativeHandle,
@@ -10,7 +10,7 @@ type FormProps = ComponentPropsWithoutRef<"form"> & {
   onSave: (value: unknown) => void;
 };
 
-type FormHandle = { clear: () => void };
+export type FormHandle = { clear: () => void };
 
 const Form = forwardRef<FormHandle, FormProps>(function Form(
   { onSave, children, ...otherProps }: FormProps,
@@ -33,7 +33,6 @@ const Form = forwardRef<FormHandle, FormProps>(function Form(
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData);
     onSave(data);
-    form.current?.reset();
   }
 
   return (
