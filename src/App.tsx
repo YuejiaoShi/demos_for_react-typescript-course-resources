@@ -6,10 +6,13 @@ import Form from "./components/Form";
 
 function App() {
   const input = useRef<HTMLInputElement>(null);
-
+  function handleSave(data: unknown) {
+    const extractedData = data as { name: string; age: string };
+    console.log(extractedData);
+  }
   return (
     <main>
-      <Form>
+      <Form onSave={handleSave}>
         <Input id="name" label="Your name" type="text" ref={input} />
         <Input id="age" label="Your age" type="number" />
         <p>
