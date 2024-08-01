@@ -1,9 +1,9 @@
-import React from "react";
+import React,{ComponentPropsWithoutRef}from "react";
 
 interface InputProps {
   label: string;
   id: string;
-}
+} & ComponentPropsWithoutRef<''>;
 
 const Input: React.FC<InputProps> = ({ id, label }: InputProps) => {
   return (
