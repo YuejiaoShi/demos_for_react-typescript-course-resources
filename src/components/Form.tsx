@@ -13,7 +13,7 @@ const Form: React.FC<FormProps> = ({ onSave, children, ...otherProps }) => {
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData);
     onSave(data);
-    // form.current?.reset();
+    form.current?.reset();
   }
 
   return (
