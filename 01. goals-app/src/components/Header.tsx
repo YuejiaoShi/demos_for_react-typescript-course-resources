@@ -7,10 +7,10 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ children, image }) => {
   return (
-    <div>
-      {children}
+    <header>
       <img src={image.src} alt={image.alt} />
-    </div>
+      {children}
+    </header>
   );
 };
 
