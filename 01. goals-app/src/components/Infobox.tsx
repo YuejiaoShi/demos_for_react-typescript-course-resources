@@ -15,7 +15,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({ mode, children }) => {
 
   return (
     <aside className="infobox infobox-warning warning--medium">
-      <h2>{warning}</h2>
+      <h2>Warning</h2>
       <p>{children}</p>
     </aside>
   );
