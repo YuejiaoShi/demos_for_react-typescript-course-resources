@@ -5,9 +5,12 @@ import Input from "./components/Input";
 import Form from "./components/Form";
 
 function App() {
+  const custonForm = useRef(null);
+
   function handleSave(data: unknown) {
     const extractedData = data as { name: string; age: string };
     console.log(extractedData);
+    custonForm.current?.clear();
   }
   return (
     <main>
