@@ -1,9 +1,12 @@
 import React, { ReactNode } from "react";
 
+
 interface InfoBoxProps {
   mode: "hint" | "warning";
   children: ReactNode;
-  severity: "low" | "medium" | "high";
+  severity?: "low" | "medium" | "high";
+  // Another syntax for indicating an optional prop is:
+  // severity?: "low" | "medium" | "high" | undefined;
 }
 
 const InfoBox: React.FC<InfoBoxProps> = ({ mode, severity, children }) => {
